@@ -42,3 +42,20 @@ print(text)
 ({[): False
 """
 string = "({[}])"
+
+pairs = {')': '(', ']': '[', '}': '{'}
+stack = []
+result = True
+
+for ch in string:
+    if ch in "([{":
+        stack.append(ch)
+    elif ch in ")]}":
+        if not stack or stack.pop() != pairs[ch]:
+            result = False
+            break
+
+if stack:
+    result = False
+
+print(result)
