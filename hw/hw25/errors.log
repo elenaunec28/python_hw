@@ -1,0 +1,8 @@
+2026-08-11 12:50:56,359 - ERROR - homework_02(1).py - 42 - Ошибка: Введено некорректное число: could not convert string to float: 'a'
+2026-08-11 12:50:56,359 - ERROR - homework_02(1).py - 40 - Ошибка: Деление на ноль невозможно: division by zero
+2026-08-11 12:50:56,360 - INFO - homework_02(1).py - 38 - Результат: 2.5
+2026-08-11 12:50:56,360 - INFO - homework_02(1).py - 38 - Результат: 4.583333333333334
+2026-08-11 12:54:01,447 - ERROR - homework_02(1).py - 41 - Ошибка: Введено некорректное число: could not convert string to float: 'a'
+2026-08-11 12:54:01,447 - ERROR - homework_02(1).py - 39 - Ошибка: Деление на ноль невозможно: division by zero
+2026-08-11 12:54:34,858 - ERROR - homework_02(1).py - 41 - Ошибка: Введено некорректное число: could not convert string to float: 'a'
+2026-08-11 12:54:34,859 - ERROR - homework_02(1).py - 39 - Ошибка: Деление на ноль невозможно: division by zero

@@ -22,7 +22,25 @@
 """
 
 def remove_duplicates(filename: str) -> None:
-    pass
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+    except FileNotFoundError as e:
+        print(f"File not found: {e}")
+        return
+
+    seen = set()
+    unique_lines = []
+    for line in lines:
+        if line not in seen:
+            seen.add(line)
+            unique_lines.append(line)
+
+    new_filename = f"unique_{filename}"
+    with open(new_filename, "w", encoding="utf-8") as f:
+        f.writelines(unique_lines)
+
+    print(f"Дубликаты удалены. Уникальные строки сохранены в {new_filename}.")
 
 
 

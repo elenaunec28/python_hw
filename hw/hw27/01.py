@@ -20,7 +20,23 @@
 """
 
 def find_keyword(filename: str, keyword: str) -> None:
-    pass
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+    except FileNotFoundError as e:
+        print(f"File not found: {e}")
+        return
+
+    matched_lines = [line for line in lines if keyword in line]
+
+    if not matched_lines:
+        return
+
+    new_filename = f"{keyword}_{filename}"
+    with open(new_filename, "w", encoding="utf-8") as f:
+        f.writelines(matched_lines)
+
+    print(f"Строки, содержащие '{keyword}', сохранены в {new_filename}.")
 
 
 find_keyword('s', 'error')
