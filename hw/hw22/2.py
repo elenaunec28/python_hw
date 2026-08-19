@@ -33,7 +33,8 @@ sample = {'Chair': 16000, 'Laptop': 6000, 'Monitor': 3000, 'Keyboard': 1500, 'Mo
 
 
 def calculate_sales(sales):
-    pass
+    revenue = {product: qty * price for product, qty, price in sales}
+    return dict(sorted(revenue.items(), key=lambda x: x[1], reverse=True))
 
 
 result = calculate_sales(sales)

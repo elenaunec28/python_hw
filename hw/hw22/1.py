@@ -34,7 +34,7 @@ sample = ['Chair', 'Laptop']
 
 
 def select_expensive_orders(ords):
-    pass
+    return sorted(o["product"] for o in ords if o["price"] > 500)
 
 
 result = select_expensive_orders(orders)
