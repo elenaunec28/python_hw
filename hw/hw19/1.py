@@ -17,9 +17,10 @@ data = {"a": 1, "b": 2, "c": 1, "d": 3}
 data = {"a": 1, "b": 2, "c": 1, "d": 3}
 
 inverted_dict = {}
+
 for k, v in data.items():
     if not v in inverted_dict:
-    inverted_dict[v] = []
+        inverted_dict[v] = []
 
     inverted_dict[v].append(k)
 

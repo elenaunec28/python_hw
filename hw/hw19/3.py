@@ -23,3 +23,23 @@ groups = ["Отличники", "Хорошисты", "Троечники", "Н�
 
 students = {"Аня": 92, "Боря": 76, "Ваня": 65, "Галя": 48, "Дима": 88, "Ева": 54}
 groups = ["Отличники", "Хорошисты", "Троечники", "Не сдали"]
+
+def distribute_students(students):
+    result = {group: {} for group in groups}
+
+    for name, score in students.items():
+        if score >= 85:
+            result["Отличники"][name] = score
+        elif score >= 70:
+            result["Хорошисты"][name] = score
+        elif score >= 50:
+            result["Троечники"][name] = score
+        else:
+            result["Не сдали"][name] = score
+
+    return result
+
+
+result = distribute_students(students)
+print("Распределение по группам:")
+print(result)
