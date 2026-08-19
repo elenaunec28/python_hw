@@ -128,7 +128,7 @@ def process_sales_data(file_path, output_dir):
 
 def main():
     if len(sys.argv) < 3:
-        print("Usage: python script.py <input_file> <output_directory>")
+        print("Usage: python 1.py <input_file> <output_directory>")
         return
 
     input_file = sys.argv[1]
